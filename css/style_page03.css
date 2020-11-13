@@ -1,0 +1,330 @@
+* {margin:0; padding:0;}
+
+::-webkit-scrollbar{width:0;height:0;}
+li {list-style:none;}
+a {text-decoration:none;}
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean');
+
+h1, h2, h3, li, a, p, dt, dd{font-family:'Noto Sans KR',"돋움", Dotum, "굴림", Gulim, sans-serif;color:black;}
+
+#warp{
+    min-width:720px;
+    max-width:1920px;
+}
+header{
+    height:70px;width:100%;
+    position:sticky;top:0;
+    background-color:rgb(42, 68, 97);
+    z-index:2;
+}
+nav li, header img{
+    opacity:0;
+    animation-name: opacity_header;
+    animation-duration:2s;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes opacity_header{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+header img{width:21px;margin:0;display:block;}
+header h1{float:left;margin:25px 0 0 110px;}
+header hr{
+    width:1316px;
+    margin:0 auto;
+    margin-top: 23px;
+    border:none;
+    border-bottom:1px solid #CCCCCC;
+}
+nav:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+nav li a{
+    font-size:12px;font-weight:100;color:white;
+    transition-property:color text-decoration;
+    transition-duration:0.5s;
+}
+nav li:nth-child(3) a{font-weight:500;color:#D7A2EA;}
+nav li a:hover{font-weight:500;color:rgba(215, 162, 234, 0.5);text-decoration:underline;}
+nav li {float:left;margin: 0 110px 0px 0px;}
+nav li:last-child {margin:0;}
+nav ul {float:right;margin:20px 110px 0 0;}
+nav li:last-child:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+
+#state {
+    height:80px;
+    position:fixed;
+    left:55px;top:270px;border-left:1px solid #CCCCCC;
+    z-index:1;
+
+    opacity:0;
+    animation-name: move_top;
+    animation-duration:2s;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes move_top{
+    0%{
+        top:700px;
+        opacity:0;
+    }
+    100%{
+        top:270px;
+        opacity:1;
+    }
+}
+#left_title{
+    position:absolute;top:-25px;left:-13px;
+    font-size:12px;font-weight:700;color:#D7A2EA;
+    text-align:center;
+}
+main #top_back{
+    background-color:#2A4461;
+    position:relative;
+}
+main #content_n{
+    height:400px;
+    position:relative;
+    top:230px;
+}
+main #content_s{
+    width:1316px;margin:0 auto;
+}
+main #main_top{
+    position:relative;
+    width:1316px;margin:0 auto;
+    height:625px;
+    background-image: url("../img/trip/object/moon.png");
+    background-size: 1000px auto; 
+    background-repeat:no-repeat;
+    background-position: center -20px;
+    background-attachment: fixed;
+    z-index:1;
+
+    opacity:0;
+    animation-name: opacity_header;
+    animation-duration:2s;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+#main_top .first_img{
+    width:400px;
+    position:absolute;
+    bottom:0;
+}
+#main_top .second_img{
+    width:400px;
+    position:absolute;
+    bottom:-411.198px;
+}
+.first_img, .second_img{
+    right:1500px;
+    animation-name: ship_right;
+    animation-duration:4s;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-out;
+}
+
+@keyframes ship_right{
+    0%{
+        right:1500px;
+    }
+    100%{
+        right:0;
+    }
+}
+
+#page_title{
+    color:white;
+    font-size:55px;font-weight:400;
+    position:absolute;
+    top:45px;
+    left:140px;
+
+    opacity:0;
+    animation-name: move_title;
+    animation-duration:2s;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+@keyframes move_title{
+    0%{
+        left:0;
+        opacity:0;
+    }
+    100%{
+        left:140px;
+        opacity:1;
+    }
+}
+.sec_name{
+    display:none;
+}
+dt, dd, h2{letter-spacing:-0.3px;}
+dt{font-size:10px;font-weight:400;color:#D7A2EA;}
+dd{
+    width:250px;
+    font-size:12px;font-weight:300;line-height:24px;color:white;
+    margin-top:50px;
+}
+#content_n dt{
+    opacity:0;
+    animation-name: move_left;
+    animation-duration:2s;
+    animation-delay:0.2s;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+#content_n dd{
+    opacity:0;
+    animation-name: move_left;
+    animation-duration:2s;
+    animation-delay:0.4s;
+    animation-duration: lenear;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+@keyframes move_left{
+    0%{
+        margin-left:100px;
+        opacity:0;
+    }
+    100%{
+        margin-left:0;
+        opacity:1;
+    }
+}
+
+.sec01 {
+    background-color:#08213D;
+    padding:0 110px;
+}
+
+.sec01 h2{
+    font-size:18px;font-weight:500;color:white;
+    float:left;
+    margin-top:450px;
+}
+#ship_down_object hr{
+    margin-top:465px;
+    width:1150px;
+    color:red;
+    float:right;
+    border:none;
+    border-bottom:1px solid #B7B7B7;
+}
+.sec01{
+    background-image: url("../img/trip/object/moon_opacity.png");
+    background-size: 1000px auto; 
+    background-repeat:no-repeat;
+    background-position: center -20px;
+    background-attachment: fixed;
+}
+
+#ship_down_object:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+.card{
+    width:1316px;
+    margin-top:150px;
+}
+.card h3{
+    font-size:15px;
+    font-weight:300;
+    color:white;
+    text-align:center;
+}
+.card hr{
+    width:150px;
+    margin:15px auto;
+    border:none;
+    border-bottom:1.5px solid #B7B7B7;
+}
+.card img{
+    width:280px;
+    transition-property:width;
+    transition-duration:1.5s;
+}
+.card img:hover{
+    width:430px;
+}
+
+.card_ob{
+    float:left;
+}
+.card_ob:nth-child(3){
+    margin-left:18%;
+}
+.card_ob:last-child{
+    float:right;
+}
+.card_ob:first-child{
+    margin-left:0;
+}
+.card_ob:last-child:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+.card:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+#card_final {
+    margin-top:150px;
+    position:relative;
+}
+#card_final dl{
+    float:left;
+    margin:170px 0 0 150px;
+}
+#card_final dt{
+    font-size:20px;
+    font-weight:500;
+    color:white;
+}
+#card_final img{
+    float:right;
+    width:430px;
+    margin: 100px 150px 20px 0;
+    position:relative;
+    z-index:1;
+}
+#card_final:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+#box_color{
+    font-size:0;
+    height:320px;
+    width:1536px;
+    background-color:rgba(9, 24, 41, 0.8);
+    position:absolute;
+    left:-110px;
+    bottom:0;
+    z-index:0;
+}

@@ -1,0 +1,399 @@
+* {margin:0; padding:0;}
+
+::-webkit-scrollbar{width:0;height:0;}
+li {list-style:none;}
+a {text-decoration:none;}
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean');
+
+h1, h2, h3, li, a, p, dt, dd{font-family:'Noto Sans KR',"돋움", Dotum, "굴림", Gulim, sans-serif;color:black;}
+
+#warp{
+    min-width:720px;
+    max-width:1920px;
+}
+header{
+    height:70px;width:100%;
+    position:sticky;top:0;
+    background-color:rgb(19, 20, 26);
+    z-index:2;
+}
+nav li, header img{
+    opacity:0;
+    animation-name: opacity_header;
+    animation-duration:2s;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+@keyframes opacity_header{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+header img{width:21px;margin:0;display:block;}
+header h1{float:left;margin:25px 0 0 110px;}
+
+nav:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+nav li a{
+    font-size:12px;font-weight:100;color:white;
+    transition-property:color text-decoration;
+    transition-duration:0.5s;
+}
+nav li:nth-child(2) a{font-weight:500;color:#CBD596;}
+nav li a:hover{font-weight:500;color:rgba(202, 213, 150, 0.5);text-decoration:underline;}
+nav li {float:left;margin: 0 110px 0px 0px;}
+nav li:last-child {margin:0;}
+nav ul {float:right;margin:20px 110px 0 0;}
+nav li:last-child:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+
+#state {
+    height:80px;
+    position:fixed;
+    left:55px;top:270px;border-left:1px solid #CCCCCC;
+    z-index:1;
+
+    opacity:0;
+    animation-name: move_top;
+    animation-duration:2s;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes move_top{
+    0%{
+        top:700px;
+        opacity:0;
+    }
+    100%{
+        top:270px;
+        opacity:1;
+    }
+}
+#left_title{
+    position:absolute;top:-25px;left:-23px;
+    font-size:12px;font-weight:700;color:#CBD596;
+    text-align:center;
+}
+main #top_back{
+    background-color:rgb(19, 20, 26);
+    position:relative;
+
+    opacity:0;
+    animation-name: opacity_header;
+    animation-duration:2s;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+main #content_n{
+    height:400px;
+    position:relative;
+    top:230px;
+}
+main #content_s{
+    width:1316px;margin:0 auto;
+}
+main #main_top{
+    position:relative;
+    width:1316px;margin:0 auto;
+    height:1000px;
+    background: url("../img/walkingdead/poster.jpg") no-repeat 985px 70px fixed;
+    background-size: auto 625px;
+    z-index:1;
+
+    opacity:0;
+    animation-name: opacity_header;
+    animation-duration:3s;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+#page_title{
+    color:white;
+    font-size:55px;font-weight:400;
+    position:absolute;
+    top:45px;
+    left:140px;
+
+    opacity:0;
+    animation-name: move_title;
+    animation-duration:2s;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+@keyframes move_title{
+    0%{
+        left:0;
+        opacity:0;
+    }
+    100%{
+        left:140px;
+        opacity:1;
+    }
+}
+
+#title_hidden{display:none;}
+dt, dd, h2{letter-spacing:-0.3px;}
+dt{font-size:10px;font-weight:400;color:#CBD596;}
+dd{
+    width:250px;
+    font-size:12px;font-weight:300;line-height:24px;color:#7F7F7F;
+    margin-top:50px;
+}
+#content_n dt{
+    opacity:0;
+    animation-name: move_left;
+    animation-duration:2s;
+    animation-delay:0.2s;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+#content_n dd{
+    opacity:0;
+    animation-name: move_left;
+    animation-duration:2s;
+    animation-delay:0.4s;
+    animation-duration: lenear;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+@keyframes move_left{
+    0%{
+        margin-left:100px;
+        opacity:0;
+    }
+    100%{
+        margin-left:0;
+        opacity:1;
+    }
+}
+
+.nav_title hr{
+    float:left;
+    margin:16px 0 0 10px;
+    width:250px;border:none;border-bottom:1px solid #B7B7B7;
+}
+.nav_title div:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+.nav_title{float:left;margin-left:5%;
+}
+.nav_title:nth-child(3){
+    position:relative;
+
+    opacity:0;
+    bottom:-200px;
+    animation-name: move_up;
+    animation-duration:2s;
+    animation-duration: lenear;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes move_up{
+    0%{
+        bottom:-200px;
+        opacity:0;
+    }
+    100%{
+        bottom:0;
+        opacity:1;
+    }
+}
+
+.nav_title:nth-child(2){
+    margin-left:30px;position:relative;bottom:-200px;
+
+    opacity:0;
+    animation-name: move_up02;
+    animation-duration:2s;
+    animation-delay:0.2s;
+    animation-duration: lenear;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes move_up02{
+    0%{
+        bottom:-200px;
+        opacity:0;
+    }
+    100%{
+        bottom:-140px;
+        opacity:1;
+    }
+}
+
+.nav_title img{
+    height:150px;
+    transition-property:height;
+    transition-duration:1s;
+}
+.nav_title img:hover{
+    height:380px;
+}
+.nav_title h2{
+    float:left;
+    font-size:16px;
+    font-weight:400;
+    color:white;
+    text-align:left;margin-bottom:5px;
+}
+article{position:relative;left:0px;margin-top:70px;}
+article:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+.sec01 {
+    background-color:rgb(19, 20, 26);
+    padding:60px 110px;
+}
+.sec01 h2{
+    font-size:18px;font-weight:500;color:white;
+    float:left;
+}
+.sec01 hr{
+    margin-top:15px;
+    width:1150px;
+    color:red;
+    float:right;
+    border:none;
+    border-bottom:1px solid #B7B7B7;
+}
+.sec01:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+.sec02 h3{
+    font-size:20px;
+    font-weight:500;
+    color:black;
+    margin:150px 0 70px 40px;
+}
+#characters {
+    width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:150px;
+}
+#characters img{
+    height:250px;
+}
+.person:first-child{
+    margin-left:0;
+}
+.person{
+    float:left;
+    margin-left:85px;
+}
+.person hr{
+    margin:6px auto;
+    width:25px;
+    border:none;
+    border-bottom:1.5px solid black;
+}
+.person p{
+    font-size:15px;
+    text-align:center;
+}
+#characters:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+.sec03{
+    width:1060px;
+    margin:50px auto 150px auto;
+}
+.sec03 h3{
+    font-size:16px;
+    font-weight:400;
+    color:#B7B7B7;    
+    text-align:center;
+    margin-bottom:50px;
+}
+.sec03 img{
+    height:110px;
+    margin-left:60px;
+    
+}
+.sec03{
+    background-color:rgb(243, 243, 243);
+    width:950px;
+    height:200px;
+    padding:30px;
+    margin:0 auto 150px auto;
+}
+.sec03 img:first-child{
+    margin-left:0;
+}
+.hr01{
+    border:none;
+    border-bottom:1px solid #B7B7B7;
+}
+
+#background_illustration h3{
+    font-size:20px;
+    font-weight:500;
+    color:black;
+    margin:150px 0 100px 150px;
+}
+.back_01 img,.back_02 img{
+    width:800px;
+}
+.back_01, .back_02{
+    margin:0 auto;
+    width:800px;
+    z-index:1;
+    position:relative;
+}
+.back_01 h4, .back_02 h4{
+    font-size:18px;
+    font-weight:600;
+    color:black;
+    margin:60px 0 15px 0;
+    text-align:right;
+}
+#background_illustration{
+    position:relative;
+}
+.back_03 img{
+    width:100%;
+}
+.back_03{
+    position:absolute;
+    bottom:-900px;
+    z-index:0;
+}
+.back_03 h4{
+    position:absolute;
+    top:680px;
+    left:900px;
+}
+.back_03 h4 .the{
+    font-size:28px;
+    margin-left:10px;
+}
+.back_03 h4 .walkingdead{
+    font-size:40px;
+}
